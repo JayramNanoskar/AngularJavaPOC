@@ -1,0 +1,10 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: '${selector}',
+  templateUrl: './${tempLateUrl}',
+  styleUrls: ['./${styleUrl}']
+})
+export class ${componentName} {
+  title = '${componentTitle}';
+}
