@@ -1,0 +1,5 @@
+This folder will have 
+-> Downloaded portabale vscode with
+	-> code.exe
+	-> local vscode data
+	-> batch file
