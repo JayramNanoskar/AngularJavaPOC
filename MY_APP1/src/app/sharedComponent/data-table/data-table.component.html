@@ -1,0 +1,36 @@
+<div class="mat-app-background basic-container" style="margin-bottom: 10px;margin-top: 10px;">
+  <ng-container *ngIf="searchRequired">
+    <mat-form-field>
+      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+    </mat-form-field>      
+  </ng-container>
+  
+  <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8"  (matSortChange)= "sortColumn($event)">
+    <ng-container [matColumnDef]="tableData" *ngFor="let tableData of objectKeys(columnHeader);let i = index">
+      
+      <ng-container *ngIf="sortingRequired; else noSort">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> {{columnHeader[tableData]}}    </th>       
+      </ng-container>
+      
+      <ng-template #noSort>
+        <th mat-header-cell *matHeaderCellDef > {{columnHeader[tableData]}}    </th>       
+      </ng-template>
+      <td mat-cell *matCellDef="let element">
+        <ng-container *ngIf="element[tableData]; else nodelete">
+          {{element[tableData] }}   
+        </ng-container>
+        <ng-template #nodelete>
+          <button mat-icon-button color="accent" (click)="deleteItem(element)">
+            <mat-icon aria-label="Delete">delete</mat-icon>
+          </button>
+      </ng-template>
+    </td>
+    </ng-container>
+    
+
+    <tr mat-header-row *matHeaderRowDef="objectKeys(columnHeader)"></tr>
+       <tr mat-row *matRowDef="let row; columns: objectKeys(columnHeader);" 
+       (click)="rowClicked(row,this)"
+       [style.background]="highlightedRows.indexOf(row) != -1 ? 'lightblue' : ''"></tr>
+  </table>
+</div>

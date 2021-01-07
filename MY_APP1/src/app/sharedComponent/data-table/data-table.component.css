@@ -1,0 +1,22 @@
+table {
+    width: 100%;
+    border-spacing: 0 8px !important;
+  }
+  
+  td.mat-cell {
+   border: 2px solid #0d0218;
+  }
+  th.mat-header-cell {
+    border: 2px solid #0d0218;
+    background: #797bd86c;
+    font-weight: bold;
+   }
+  tr.mat-row {
+      height: auto;
+  }
+  .mat-row:hover {
+    background-color: rgb(144, 231, 243);
+  }
+  .highlight{
+    background:rgb(144, 231, 243);
+  }

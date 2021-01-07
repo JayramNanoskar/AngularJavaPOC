@@ -1,0 +1,13 @@
+value: {{ value }}
+
+<ng-container *ngFor="let item of items">
+	<label class="container">
+  <input 
+  type="radio" 
+  [value]="item.value"
+  [ngModel]="value"
+  (ngModelChange)="change($event)"
+  name="radio2" />{{item.name}}
+  
+</label>
+</ng-container>

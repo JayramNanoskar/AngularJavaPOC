@@ -1,0 +1,74 @@
+<div class="container">
+	
+	<form [formGroup]="GeneralTabForm" #f="ngForm" (ngSubmit)="onSubmit(f)">
+	<mat-expansion-panel id='searchPanel' [expanded]='true'>
+	<mat-expansion-panel-header><div class="row">
+		<h2>Search Section</h2>
+	</div>
+	</mat-expansion-panel-header>
+		<div class="form-group row" id="row1">
+			<div class="col-sm-3" id="searchPanel_row1_col1">
+				<label for="labelFor" class='col-form-label'>Emp ID</label>
+			</div>
+			<div class="col-sm-3" id="searchPanel_row1_col2">
+				<input type='text' id='seEmpId' name='seEmpId' value='' class="form-control inputfield" formControlName='seEmpId'>
+			</div>
+			<div class="col-sm-3" id="searchPanel_row1_col3">
+				<label for="labelFor" class='col-form-label'>Country</label>
+			</div>
+			<div class="col-sm-3" id="searchPanel_row1_col4">
+				<select placeholder="Placeholder" id="ceCountryId" class="form-control inputfield" name="ceCountryId" formControlName=ceCountryId>
+					<option *ngFor="let item of ceCountryIdList" >
+						{{item.viewValue}}
+					</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-group row" id="row2">
+			<div class="col-sm-3" id="searchPanel_row2_col1">
+				<label for="labelFor" class='col-form-label'>Mobile</label>
+			</div>
+			<div class="col-sm-3" id="searchPanel_row2_col2">
+				<input type='text' id='seMobile' name='seMobile' value='' class="form-control inputfield" formControlName='seMobile'>
+			</div>
+			<div class="col-sm-3" id="searchPanel_row2_col3">
+				<label for="labelFor" class='col-form-label'>Gender</label>
+			</div>
+			<div class="col-sm-3" id="searchPanel_row2_col4">
+				<input type='radio' id='Male' name='seGenderId' value='Male' formControlName='seGenderId' ><label for=Male>Male</label><br>
+				<input type='radio' id='Female' name='seGenderId' value='Female' formControlName='seGenderId' ><label for=Female>Female</label><br>
+
+			</div>
+		</div>
+		<div class="form-group row" id="row3">
+			<div class="col-sm-3" id="searchPanel_row3_col1">
+				<label for="labelFor" class='col-form-label'>Country</label>
+			</div>
+			<div class="col-sm-3" id="searchPanel_row3_col2">
+				<input type='checkbox' id=' India' value=' India' #countryCheckboxes (change)="onChangecountry('seInd', $event.target.checked)">
+				<label for= India> India</label><br>
+				<input type='checkbox' id='USA' value='USA' #countryCheckboxes (change)="onChangecountry('seUsa', $event.target.checked)">
+				<label for=USA>USA</label><br>
+				<input type='checkbox' id=' UK' value=' UK' #countryCheckboxes (change)="onChangecountry('seUk', $event.target.checked)">
+				<label for= UK> UK</label><br>
+
+			</div>
+			<div class="col-sm-3" id="searchPanel_row3_col3">
+				<input type='submit' class='btn btn-primary btn-sm'  value='Search'  (click)="onsubmitClicked($event,f)" >
+			</div>
+			<div class="col-sm-3" id="searchPanel_row3_col4">
+			</div>
+		</div>
+		<div class="form-group row" id="row4">
+			<div class="col-sm-3" id="searchPanel_row4_col1">
+			</div>
+			<div class="col-sm-3" id="searchPanel_row4_col2">
+			</div>
+			<div class="col-sm-3" id="searchPanel_row4_col3">
+			</div>
+			<div class="col-sm-3" id="searchPanel_row4_col4">
+			</div>
+		</div>
+	</mat-expansion-panel>
+</form>
+</div>

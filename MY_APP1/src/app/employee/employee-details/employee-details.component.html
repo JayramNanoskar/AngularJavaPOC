@@ -1,0 +1,20 @@
+<div class="container">
+	<div class="row">
+		<h2>Employee Details</h2>
+	</div>
+	<form [formGroup]="EmployeeDetailsForm" #f="ngForm" (ngSubmit)="onSubmit(f)">
+		<div class="form-group row" id="row1">
+
+
+				<div *ngIf="isedSearchTableDataLoaded">
+					<div class="form-group row" id="row3tab" style="margin-top: -10px;">
+						<div class="col-sm-12" id="row3_col1tab">
+						<app-data-table [tableData]="edSearchTableTableData" [columnHeader]="edSearchTableColumnHeader" [sortingRequired]="true" [defaultSortingColumn]=1 [searchRequired] = "false" (rowClickEvent)="onedSearchTableRowClicked($event)" (customsortEvent)="onedSearchTableSortClicked($event)" (deleteButtonEvent)="onedSearchTableDeleteClicked($event)"></app-data-table>
+				</div>
+				</div>
+				</div>
+			<div class="col-sm-12" id="edSearchTable_row1_col1">
+			</div>
+		</div>
+	</form>
+</div>

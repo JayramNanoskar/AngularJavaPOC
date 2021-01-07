@@ -1,0 +1,16 @@
+<div >
+	<div class="row">
+		<h2>Employee Menu</h2>
+	</div>
+	<form [formGroup]="MenuEmployeeForm" #f="ngForm" (ngSubmit)="onSubmit(f)">
+		<div class="form-group row" id="row1">
+
+
+				<div *ngIf="ismMenuListDataLoaded">
+					<app-menu-list [listData]="mMenuListListData" (linkClickEvent)="mMenuListClickHandler($event)"></app-menu-list>
+				</div>
+			<div class="col-sm-12" id="mMenuList_row1_col1">
+			</div>
+		</div>
+	</form>
+</div>

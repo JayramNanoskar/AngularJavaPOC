@@ -1,0 +1,7 @@
+::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-label-active {
+    color: green;
+    background-color: rgb(161, 168, 161);
+  }
+  ::ng-deep .mat-tab-body-wrapper {
+    height: 75vh; 
+}

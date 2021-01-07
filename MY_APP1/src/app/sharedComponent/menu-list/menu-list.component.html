@@ -1,0 +1,25 @@
+<!--<p>menu-list works!</p>
+<nav class="menu">
+    <ul class="menu-options-list">
+      <li *ngFor="let option of menuOptions" class="menu-option"   (click)="redirectToURL(option.url)">
+        {{option.name}}
+      </li>
+    </ul>
+  </nav>-->
+<div style="margin-top: -30px;">
+  <mat-nav-list >
+	<ng-container *ngFor="let link of menuOptions">
+		<mat-list-item (click)="redirectToURL(link.url)" class="menu-option">
+      <mat-icon><i class="fa {{ link.icon }} " aria-hidden="true"></i></mat-icon> {{ link.name }} </mat-list-item>
+	</ng-container>
+</mat-nav-list>
+<!--<h5>Complex Nav List</h5>
+<mat-nav-list>
+	<mat-list-item *ngFor="let link of links">
+		<a matLine href="javascript:void(0)">{{ link }}</a>
+		<button mat-icon-button>
+        <mat-icon>info</mat-icon>
+     </button>
+	</mat-list-item>
+</mat-nav-list>-->
+</div>

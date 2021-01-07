@@ -1,0 +1,32 @@
+<div class="container">
+	
+	<form [formGroup]="MEMOTabForm" #f="ngForm" (ngSubmit)="onSubmit(f)">
+	<mat-expansion-panel id='MEMOsearchPanel' [expanded]='true'>
+	<mat-expansion-panel-header><div class="row">
+		<h2>MEMO Search Section</h2>
+	</div>
+	</mat-expansion-panel-header>
+		<div class="form-group row" id="row1">
+			<div class="col-sm-6" id="mEMOsearchPanel_row1_col1">
+				<label for="labelFor" class='col-form-label'>MEMO Emp ID</label>
+			</div>
+			<div class="col-sm-6" id="mEMOsearchPanel_row1_col2">
+				<input type='text' id='seEmpId' name='seEmpId' value='' class="form-control inputfield" formControlName='seEmpId'>
+			</div>
+		</div>
+		<div class="form-group row" id="row2">
+			<div class="col-sm-6" id="mEMOsearchPanel_row2_col1">
+				<input type='submit' class='btn btn-primary btn-sm'  value='MEMO Search'  (click)="onsubmitClicked($event,f)" >
+			</div>
+			<div class="col-sm-6" id="mEMOsearchPanel_row2_col2">
+			</div>
+		</div>
+		<div class="form-group row" id="row3">
+			<div class="col-sm-6" id="mEMOsearchPanel_row3_col1">
+			</div>
+			<div class="col-sm-6" id="mEMOsearchPanel_row3_col2">
+			</div>
+		</div>
+	</mat-expansion-panel>
+</form>
+</div>

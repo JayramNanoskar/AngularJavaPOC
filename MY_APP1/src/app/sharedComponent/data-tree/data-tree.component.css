@@ -1,0 +1,20 @@
+.treeview{
+    overflow-y: auto;
+    max-height: 70vh!important;
+    overflow-x: auto;
+    max-width: 20vw!important;
+}
+
+.mat-tree-node > .mat-icon-button {
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    padding-left: -20px!important;
+    
+  }
+
+  .mat-tree-node{
+    min-height: auto !important;
+  }
+
+  

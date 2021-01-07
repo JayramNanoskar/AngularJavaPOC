@@ -1,0 +1,20 @@
+<div class="container">
+	
+	<form [formGroup]="InvTabsForm" #f="ngForm" (ngSubmit)="onSubmit(f)">
+
+
+				<div *ngIf="istabs1605861680528TabsDataLoaded">
+					<div class="form-group row" id="row3tabs" style="margin-top: -10px;margin-bottom: -10px;">
+						<div class="col-sm-12" id="row3_col1tabs">
+						<app-tabs [tabs]="tabs1605861680528TabsList" [selectedTab]="tabs1605861680528SelectedTabNo" (tabChangedEvent)="ontabs1605861680528TabChanged($event)" ></app-tabs>
+				</div>
+				<div class="col-sm-12" id="ro">
+					<input type='Button' class='btn btn-primary btn-sm'  value='SaveAll' 
+					 (click)="ontabs1605861680528SaveAllClicked($event,f)" >
+				</div>
+				</div>
+				</div>
+			<div class="col-sm-12" id="tabs1605861680528_row1_col2">
+			</div>
+	</form>
+</div>
